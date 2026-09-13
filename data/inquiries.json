@@ -1,0 +1,39 @@
+[
+  {
+    "id": "ARCH-INQ-3463",
+    "name": "Chaudhry Kamran Nawaz",
+    "email": "kamran.nawaz@heritage.org.pk",
+    "phone": "+92 300 8472910",
+    "typology": "residential",
+    "area": "1 Kanal / 5,200 sq.ft",
+    "location": "DHA Phase 6, Lahore",
+    "message": "Requesting consultation regarding a bioclimatic residence with internal brick courtyards.",
+    "status": "contacted",
+    "createdAt": "2026-09-13T03:35:25.947Z",
+    "updatedAt": "2026-09-13T03:35:25.968Z"
+  },
+  {
+    "id": "ARCH-INQ-1001",
+    "name": "Malik Farhan Rasheed",
+    "email": "farhan.rasheed@estatepk.com",
+    "phone": "+92 300 8452190",
+    "typology": "residential",
+    "area": "2 Kanal / 9,200 sq.ft",
+    "location": "Gulberg V, Lahore",
+    "message": "Interested in commissioning a modern villa with an internal water courtyard and travertine facade.",
+    "status": "contacted",
+    "createdAt": "2026-09-08T10:15:00.000Z"
+  },
+  {
+    "id": "ARCH-INQ-1002",
+    "name": "Syeda Rabia Gilani",
+    "email": "rabia.gilani@nexustech.pk",
+    "phone": "+92 321 4455889",
+    "typology": "commercial",
+    "area": "48,500 sq.ft",
+    "location": "Upper Mall, Lahore",
+    "message": "Inquiry regarding architectural design and LEED certification for our upcoming corporate IT center.",
+    "status": "in-review",
+    "createdAt": "2026-09-10T14:30:00.000Z"
+  }
+]

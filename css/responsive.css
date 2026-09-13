@@ -1,0 +1,269 @@
+/* ==========================================================================
+   ARCHTECH ARCHITECTURE FIRM - RESPONSIVE STYLESHEET
+   Breakpoints: 1200px, 992px, 768px, 640px, 480px
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Large Desktops / Laptops (<= 1200px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .hero-content-grid {
+    gap: 40px;
+  }
+
+  .hero-card-main img {
+    height: 460px;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1.2fr 1fr 1fr 1.1fr;
+    gap: 36px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Tablets / Small Desktops (<= 992px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  :root {
+    --header-height: 76px;
+  }
+
+  .section-pad {
+    padding: 80px 0;
+  }
+
+  .section-pad-sm {
+    padding: 50px 0;
+  }
+
+  /* Navigation */
+  .nav-menu {
+    display: none;
+  }
+
+  .header-actions .btn {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  /* Hero Section */
+  .hero-content-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .hero-visual-frame {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .hero-card-main img {
+    height: 380px;
+  }
+
+  .hero-stats-strip {
+    gap: 20px;
+  }
+
+  /* Manifesto Strip */
+  .manifesto-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Grids */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .process-timeline {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .contact-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .modal-specs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Small Tablets & Mobile Landscape (<= 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .top-bar-right {
+    display: none;
+  }
+
+  .top-bar .container {
+    justify-content: center;
+  }
+
+  .section-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 36px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .modal-image-wrap {
+    height: 280px;
+  }
+
+  .modal-content-wrap {
+    padding: 24px;
+  }
+
+  .map-embed-container {
+    height: 350px;
+  }
+
+  .map-overlay-card {
+    position: static;
+    max-width: 100%;
+    margin-bottom: 16px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Phones (<= 640px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 18px;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-stats-strip {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-ctas .btn {
+    width: 100%;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-container {
+    padding: 28px 20px;
+  }
+
+  .filter-tabs-wrapper {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .filter-tab-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .brand-name {
+    font-size: 1.3rem;
+  }
+
+  .modal-specs-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .scroll-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Small Mobile Phones (<= 380px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 380px) {
+  .hero-title {
+    font-size: 1.9rem;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.78rem;
+  }
+
+  .brand-tagline {
+    display: none;
+  }
+}

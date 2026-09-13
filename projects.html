@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architectural Projects & Portfolio | Archtech | Lahore, Pakistan</title>
+  <meta name="description" content="Explore Archtech's curated architectural portfolio: luxury residences, corporate office towers, bespoke interiors, and cultural landmarks across Lahore and Pakistan.">
+  <meta name="keywords" content="Archtech Portfolio, Architecture Projects Lahore, Modern Villas Pakistan, Corporate Architecture Lahore, Interior Design Portfolio">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Architectural Projects & Portfolio | Archtech Lahore">
+  <meta property="og:description" content="A curated showcase of completed residential, commercial, interior, and civic architectural commissions across Pakistan.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Main Sticky Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-wrapper">
+        <a href="index.html" class="brand-logo" aria-label="Archtech Architecture Firm Home">
+          <div class="logo-symbol">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2">
+              <path d="M3 21V3l18 18H3z"></path>
+              <path d="M9 15l6-6"></path>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">ARCH<span>TECH</span></span>
+            <span class="brand-tagline">Architecture • Urban Design</span>
+          </div>
+        </a>
+
+        <nav class="nav-menu" aria-label="Main Navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="projects.html" class="nav-link active">Projects</a>
+          <a href="team.html" class="nav-link">Team</a>
+          <a href="testimonials.html" class="nav-link">Clients</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="contact.html" class="btn btn-primary btn-sm">
+            <span>Inquire Project</span>
+          </a>
+          <button class="mobile-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Off-Canvas Drawer -->
+  <div class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-nav-list">
+      <a href="index.html" class="mobile-nav-link"><span>01. Home</span> <span>→</span></a>
+      <a href="about.html" class="mobile-nav-link"><span>02. About Us</span> <span>→</span></a>
+      <a href="services.html" class="mobile-nav-link"><span>03. Services</span> <span>→</span></a>
+      <a href="projects.html" class="mobile-nav-link active"><span>04. Projects</span> <span>→</span></a>
+      <a href="team.html" class="mobile-nav-link"><span>05. Studio Team</span> <span>→</span></a>
+      <a href="testimonials.html" class="mobile-nav-link"><span>06. Client Reviews</span> <span>→</span></a>
+      <a href="contact.html" class="mobile-nav-link"><span>07. Contact Us</span> <span>→</span></a>
+    </div>
+    <div class="mobile-contact-card">
+      <span class="meta-tag">Studio Direct</span>
+      <p style="color: #fff; font-weight: 600;">+92 42 35752102</p>
+      <p style="color: #b5a99d; font-size: 0.8rem;">9 Scotch Corner, Upper Mall, Lahore</p>
+      <a href="contact.html" class="btn btn-primary btn-sm" style="margin-top: 10px;">Book Consultation</a>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- Page Hero Banner -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-inner">
+          <nav class="breadcrumb-nav" aria-label="Breadcrumbs">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb-separator">/</span>
+            <span>Project Portfolio</span>
+          </nav>
+          <span class="meta-tag">Spatial Archive</span>
+          <h1 class="page-hero-title">Selected Architectural Commissions & <span class="text-gold">Built Works.</span></h1>
+          <p class="page-hero-lead">
+            An interactive survey of residential estates, corporate headquarters, luxury commercial interiors, and civic cultural landmarks. Click any project to inspect structural details and architectural briefs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Gallery Grid & Dynamic Filter -->
+    <section class="section-pad">
+      <div class="container">
+        <!-- Filter Tabs -->
+        <div class="filter-tabs-wrapper" role="tablist" aria-label="Filter projects by category">
+          <button class="filter-tab-btn active" data-filter="all" role="tab" aria-selected="true">All Typologies</button>
+          <button class="filter-tab-btn" data-filter="residential" role="tab" aria-selected="false">Residential</button>
+          <button class="filter-tab-btn" data-filter="commercial" role="tab" aria-selected="false">Commercial</button>
+          <button class="filter-tab-btn" data-filter="interior" role="tab" aria-selected="false">Interior</button>
+          <button class="filter-tab-btn" data-filter="cultural" role="tab" aria-selected="false">Cultural & Public</button>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="projects-grid" id="portfolio-container">
+          <!-- Card 1 -->
+          <article class="project-card" data-category="residential" data-project-id="res-01">
+            <div class="project-image-box">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="The Travertine Pavilion" loading="lazy">
+              <span class="project-category-badge">Residential</span>
+              <span class="project-specs-badge">9,200 sq.ft</span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta-row">
+                <span>Gulberg V, Lahore</span>
+                <span>2024</span>
+              </div>
+              <h3 class="project-title">The Travertine Pavilion</h3>
+              <p class="project-desc">A monolithic luxury residence configured around an internal reflection pool and passive solar brass louvers.</p>
+              <div class="project-card-footer">
+                <span class="project-link-btn">
+                  Inspect Project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="project-card" data-category="commercial" data-project-id="com-01">
+            <div class="project-image-box">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Nexus Innovation Headquarters" loading="lazy">
+              <span class="project-category-badge">Commercial</span>
+              <span class="project-specs-badge">48,500 sq.ft</span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta-row">
+                <span>Upper Mall, Lahore</span>
+                <span>2023</span>
+              </div>
+              <h3 class="project-title">Nexus Innovation Headquarters</h3>
+              <p class="project-desc">A landmark 12-storey corporate tower with automated solar fins and LEED Gold certified energy systems.</p>
+              <div class="project-card-footer">
+                <span class="project-link-btn">
+                  Inspect Project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="project-card" data-category="interior" data-project-id="int-01">
+            <div class="project-image-box">
+              <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Aura Haute Horlogerie Boutique" loading="lazy">
+              <span class="project-category-badge">Interior</span>
+              <span class="project-specs-badge">3,800 sq.ft</span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta-row">
+                <span>DHA Phase 5, Lahore</span>
+                <span>2024</span>
+              </div>
+              <h3 class="project-title">Aura Haute Horlogerie Boutique</h3>
+              <p class="project-desc">An ultra-refined retail interior combining smoked oak acoustic paneling with hand-fluted Nero Marquina marble.</p>
+              <div class="project-card-footer">
+                <span class="project-link-btn">
+                  Inspect Project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="project-card" data-category="cultural" data-project-id="cul-01">
+            <div class="project-image-box">
+              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Lahore Center for Contemporary Arts" loading="lazy">
+              <span class="project-category-badge">Cultural & Public</span>
+              <span class="project-specs-badge">34,000 sq.ft</span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta-row">
+                <span>Canal Bank, Lahore</span>
+                <span>2023</span>
+              </div>
+              <h3 class="project-title">Lahore Center for Contemporary Arts</h3>
+              <p class="project-desc">A civic arts pavilion paying homage to Lahore's monumental brick heritage through contemporary brutalist geometry.</p>
+              <div class="project-card-footer">
+                <span class="project-link-btn">
+                  Inspect Project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="project-card" data-category="residential" data-project-id="res-02">
+            <div class="project-image-box">
+              <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80" alt="Cantilever Villa at Margalla Foothills" loading="lazy">
+              <span class="project-category-badge">Residential</span>
+              <span class="project-specs-badge">12,500 sq.ft</span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta-row">
+                <span>Sector E-7, Islamabad</span>
+                <span>2022</span>
+              </div>
+              <h3 class="project-title">Cantilever Villa at Margalla</h3>
+              <p class="project-desc">A dramatic post-tensioned residential volume suspended over a pine valley with passive cross-ventilation.</p>
+              <div class="project-card-footer">
+                <span class="project-link-btn">
+                  Inspect Project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="project-card" data-category="commercial" data-project-id="com-02">
+            <div class="project-image-box">
+              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="The Foundry Creative Hub" loading="lazy">
+              <span class="project-category-badge">Commercial</span>
+              <span class="project-specs-badge">26,000 sq.ft</span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta-row">
+                <span>Gulberg III, Lahore</span>
+                <span>2023</span>
+              </div>
+              <h3 class="project-title">The Foundry Creative Hub</h3>
+              <p class="project-desc">Adaptive reuse and seismic stabilization of a 1950s metal casting facility converted into modern studio pods.</p>
+              <div class="project-card-footer">
+                <span class="project-link-btn">
+                  Inspect Project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 7 -->
+          <article class="project-card" data-category="interior" data-project-id="int-02">
+            <div class="project-image-box">
+              <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="The Scotch Corner Penthouse" loading="lazy">
+              <span class="project-category-badge">Interior</span>
+              <span class="project-specs-badge">5,400 sq.ft</span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta-row">
+                <span>Upper Mall Scheme, Lahore</span>
+                <span>2024</span>
+              </div>
+              <h3 class="project-title">The Scotch Corner Penthouse</h3>
+              <p class="project-desc">Duplex residence featuring Italian Calacatta Viola marble, custom walnut millwork, and private rooftop plunge pool.</p>
+              <div class="project-card-footer">
+                <span class="project-link-btn">
+                  Inspect Project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 8 -->
+          <article class="project-card" data-category="cultural" data-project-id="cul-02">
+            <div class="project-image-box">
+              <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=800&q=80" alt="Shalamar Heritage Interpretive Center" loading="lazy">
+              <span class="project-category-badge">Cultural & Public</span>
+              <span class="project-specs-badge">18,200 sq.ft</span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta-row">
+                <span>GT Road, Lahore</span>
+                <span>2022</span>
+              </div>
+              <h3 class="project-title">Shalamar Interpretive Center</h3>
+              <p class="project-desc">A low-slung, non-intrusive museum pavilion utilizing ancient lime plaster techniques and subterranean archives.</p>
+              <div class="project-card-footer">
+                <span class="project-link-btn">
+                  Inspect Project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 9 -->
+          <article class="project-card" data-category="residential" data-project-id="res-03">
+            <div class="project-image-box">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="The Courtyard Sanctuary" loading="lazy">
+              <span class="project-category-badge">Residential</span>
+              <span class="project-specs-badge">8,500 sq.ft</span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta-row">
+                <span>DHA Phase 6, Lahore</span>
+                <span>2024</span>
+              </div>
+              <h3 class="project-title">The Courtyard Sanctuary</h3>
+              <p class="project-desc">An introspective family residence centered on a protected courtyard of mature neem trees and sandstone water fountains.</p>
+              <div class="project-card-footer">
+                <span class="project-link-btn">
+                  Inspect Project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Detail Lightbox Modal -->
+    <div class="project-modal-backdrop" role="dialog" aria-modal="true" aria-label="Project Details Inspector">
+      <div class="project-modal-box">
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+        <div class="modal-image-wrap">
+          <img src="" alt="Project Detailed View">
+        </div>
+        <div class="modal-content-wrap">
+          <span class="meta-tag modal-category-tag">Typology</span>
+          <h2 class="modal-title" style="font-size: 2rem; margin-top: 10px; color: #fff;">Project Title</h2>
+          
+          <div class="modal-specs-grid">
+            <div class="modal-spec-item">
+              <span>Location</span>
+              <span class="modal-spec-location">Lahore, PK</span>
+            </div>
+            <div class="modal-spec-item">
+              <span>Completion Year</span>
+              <span class="modal-spec-year">2024</span>
+            </div>
+            <div class="modal-spec-item">
+              <span>Covered Area</span>
+              <span class="modal-spec-area">9,200 sq.ft</span>
+            </div>
+            <div class="modal-spec-item">
+              <span>Primary Materials</span>
+              <span class="modal-spec-materials">Travertine, Concrete, Brass</span>
+            </div>
+          </div>
+
+          <h4 style="font-size: 1rem; color: var(--gold-light); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">Architectural Concept</h4>
+          <p class="modal-desc" style="font-size: 0.95rem; color: #b5a99d; line-height: 1.8; margin-bottom: 20px;"></p>
+          
+          <h4 style="font-size: 1rem; color: var(--gold-light); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">Engineering & Technical Execution</h4>
+          <p class="modal-details-extra" style="font-size: 0.95rem; color: #b5a99d; line-height: 1.8; margin-bottom: 28px;"></p>
+
+          <a href="contact.html" class="btn btn-primary btn-sm">
+            <span>Inquire About Similar Project</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <section class="section-pad-sm" style="background: radial-gradient(circle at center, #240a15 0%, #120309 80%); text-align: center;">
+      <div class="container" style="max-width: 740px;">
+        <span class="meta-tag" style="justify-content: center;">Custom Commission</span>
+        <h2 class="section-title" style="margin: 16px 0;">Envisioning a Landmark of Your Own?</h2>
+        <p style="color: #cfc5bb; margin-bottom: 30px;">
+          Review our material library and project portfolios at our Upper Mall studio in Lahore.
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a href="contact.html" class="btn btn-primary">Schedule Studio Appointment</a>
+          <a href="tel:+924235752102" class="btn btn-secondary">Call: +92 42 35752102</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Universal Studio Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-symbol">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2">
+                <path d="M3 21V3l18 18H3z"></path>
+                <path d="M9 15l6-6"></path>
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">ARCH<span>TECH</span></span>
+              <span class="brand-tagline">Architecture • Urban Design</span>
+            </div>
+          </a>
+          <p>
+            Archtech is a premier architectural consultancy based in Lahore, Pakistan. Dedicated to timeless aesthetics, climatic intelligence, and precision craftsmanship across residential, commercial, and civic sectors.
+          </p>
+          <div class="footer-pcatp-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span>PCATP Registered Practice • Est. 2006</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Studio Pages</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Archtech</a></li>
+            <li><a href="services.html">Architectural Services</a></li>
+            <li><a href="projects.html">Project Showcase</a></li>
+            <li><a href="team.html">Architects & Team</a></li>
+            <li><a href="testimonials.html">Client Reviews</a></li>
+            <li><a href="contact.html">Contact Studio</a></li>
+            <li><a href="admin.html" style="color: var(--gold-primary);">Studio Admin Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Disciplines</h4>
+          <ul class="footer-links-list">
+            <li><a href="services.html">Luxury Residential</a></li>
+            <li><a href="services.html">Commercial & Towers</a></li>
+            <li><a href="services.html">Interior Architecture</a></li>
+            <li><a href="services.html">3D BIM Visualization</a></li>
+            <li><a href="services.html">Heritage Restoration</a></li>
+            <li><a href="services.html">Construction Auditing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Lahore Studio</h4>
+          <div class="footer-contact-items">
+            <div class="footer-contact-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>9 Scotch Corner, Upper Mall, Street P, Upper Mall Scheme, Lahore, 54000, Pakistan</span>
+            </div>
+            <div class="footer-contact-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <a href="tel:+924235752102">+92 42 35752102</a>
+            </div>
+            <div class="footer-contact-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:studio@archtech.pk">studio@archtech.pk</a>
+            </div>
+            <div class="footer-contact-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Mon – Fri: 9:00 AM – 6:30 PM<br>Sat: 10:00 AM – 2:00 PM (By Appt)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span>&copy; 2026 Archtech Architecture Firm. All rights reserved. Registered with PCATP & IAP.</span>
+        <div class="footer-social-strip">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Archtech on LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Archtech on Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Archtech on Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-to-top" aria-label="Scroll back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/backend-integration.js"></script>
+</body>
+</html>

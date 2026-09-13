@@ -1,0 +1,26 @@
+[
+  {
+    "id": "ARCH-CON-205",
+    "name": "Mian Salman Mansha",
+    "email": "salman.mansha@manshagroup.com",
+    "phone": "+92 321 8899001",
+    "preferredDate": "2026-09-22",
+    "meetingType": "studio",
+    "projectType": "commercial",
+    "notes": "Initial feasibility discussion for corporate office building on Main Boulevard Gulberg.",
+    "status": "pending",
+    "createdAt": "2026-09-13T03:35:25.953Z"
+  },
+  {
+    "id": "ARCH-CON-501",
+    "name": "Dr. Ayesha Bokhari",
+    "email": "ayesha.bokhari@lmc.edu.pk",
+    "phone": "+92 333 5123980",
+    "meetingType": "studio",
+    "preferredDate": "2026-09-18",
+    "projectType": "residential",
+    "notes": "Would like to visit the Upper Mall studio to discuss plot setbacks and architectural layouts for DHA Phase 6.",
+    "status": "confirmed",
+    "createdAt": "2026-09-11T09:00:00.000Z"
+  }
+]
