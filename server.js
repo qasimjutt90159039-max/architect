@@ -11,46 +11,86 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Data Paths
-const DATA_DIR = path.join(__dirname, 'data');
+// Data Paths (Supports both local Node and Vercel serverless /tmp environment)
+const isVercel = process.env.VERCEL === '1' || process.env.NOW_REGION;
+const LOCAL_DATA_DIR = path.join(__dirname, 'data');
+const DATA_DIR = isVercel ? path.join('/tmp', 'archtech-data') : LOCAL_DATA_DIR;
+
 const INQUIRIES_FILE = path.join(DATA_DIR, 'inquiries.json');
 const CONSULTATIONS_FILE = path.join(DATA_DIR, 'consultations.json');
 const SUBSCRIBERS_FILE = path.join(DATA_DIR, 'subscribers.json');
 const PROJECTS_FILE = path.join(DATA_DIR, 'projects.json');
 
-// Ensure data directory and files exist
+// In-memory fallback cache
+const memCache = {
+  inquiries: null,
+  consultations: null,
+  subscribers: null,
+  projects: null
+};
+
+// Ensure data directory exists
 if (!fs.existsSync(DATA_DIR)) {
-  fs.mkdirSync(DATA_DIR, { recursive: true });
-}
-
-function initDataFile(filePath, defaultData) {
-  if (!fs.existsSync(filePath)) {
-    fs.writeFileSync(filePath, JSON.stringify(defaultData, null, 2), 'utf8');
-  }
-}
-
-initDataFile(INQUIRIES_FILE, []);
-initDataFile(CONSULTATIONS_FILE, []);
-initDataFile(SUBSCRIBERS_FILE, []);
-initDataFile(PROJECTS_FILE, []);
-
-// Helpers for Data Read/Write
-function readJSON(filePath) {
   try {
-    const raw = fs.readFileSync(filePath, 'utf8');
-    return JSON.parse(raw);
-  } catch (err) {
-    console.error(`Error reading ${filePath}:`, err);
-    return [];
+    fs.mkdirSync(DATA_DIR, { recursive: true });
+  } catch (e) {
+    console.warn('DATA_DIR creation notice:', e.message);
   }
 }
 
-function writeJSON(filePath, data) {
+function initDataFile(fileName, defaultData, targetPath) {
+  const seedPath = path.join(LOCAL_DATA_DIR, fileName);
+  if (!fs.existsSync(targetPath)) {
+    try {
+      if (fs.existsSync(seedPath)) {
+        const seedContent = fs.readFileSync(seedPath, 'utf8');
+        fs.writeFileSync(targetPath, seedContent, 'utf8');
+      } else {
+        fs.writeFileSync(targetPath, JSON.stringify(defaultData, null, 2), 'utf8');
+      }
+    } catch (err) {
+      console.warn(`Init notice for ${fileName}:`, err.message);
+    }
+  }
+}
+
+initDataFile('inquiries.json', [], INQUIRIES_FILE);
+initDataFile('consultations.json', [], CONSULTATIONS_FILE);
+initDataFile('subscribers.json', [], SUBSCRIBERS_FILE);
+initDataFile('projects.json', [], PROJECTS_FILE);
+
+// Helpers for Data Read/Write with graceful fallback
+function readJSON(filePath, cacheKey) {
+  try {
+    if (fs.existsSync(filePath)) {
+      const raw = fs.readFileSync(filePath, 'utf8');
+      const parsed = JSON.parse(raw);
+      if (cacheKey) memCache[cacheKey] = parsed;
+      return parsed;
+    }
+  } catch (err) {
+    console.warn(`Read notice for ${filePath}:`, err.message);
+  }
+  // Try reading from local data folder as fallback
+  try {
+    const baseName = path.basename(filePath);
+    const fallbackPath = path.join(LOCAL_DATA_DIR, baseName);
+    if (fs.existsSync(fallbackPath)) {
+      const raw = fs.readFileSync(fallbackPath, 'utf8');
+      return JSON.parse(raw);
+    }
+  } catch (e) {}
+
+  return (cacheKey && memCache[cacheKey]) ? memCache[cacheKey] : [];
+}
+
+function writeJSON(filePath, data, cacheKey) {
+  if (cacheKey) memCache[cacheKey] = data;
   try {
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
     return true;
   } catch (err) {
-    console.error(`Error writing ${filePath}:`, err);
+    console.warn(`Write notice for ${filePath}:`, err.message);
     return false;
   }
 }
